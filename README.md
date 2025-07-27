@@ -19,14 +19,19 @@ The dataset includes the following fields:
 
 ## What I Did
 
-- Created a SQL table and imported the CSV data
-- Cleaned the data (e.g., removed invalid entries, converted prices from paise to rupees)
+
+- Created a SQL table and imported the product catalog from a CSV file  
+- Cleaned the data by removing invalid entries and converting prices from paise to rupees  
 - Wrote multiple SQL queries to:
-  - Check available vs out-of-stock items
-  - Find products with highest discounts
-  - Calculate estimated revenue by category
-  - Group products by weight
-  - and many more sql queries explored
+  - Analyze available vs out-of-stock items  
+  - Identify products with the highest discounts  
+  - Calculate estimated revenue by category  
+  - Group products by weight (Low, Medium, Bulk)  
+  - Explore pricing patterns, average discounts, and inventory metrics  
+  - Identify revenue loss from out-of-stock items  
+  - Compare price per gram across products  
+  - And many more business insights
+
 
 ## Files
 
