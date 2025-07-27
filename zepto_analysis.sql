@@ -1,4 +1,4 @@
-zepto_analysis.sql
+-- zepto_analysis.sql
 
 -- Create table 
 CREATE TABLE zepto (
@@ -127,3 +127,35 @@ SELECT category,
 FROM zepto
 GROUP BY category
 ORDER BY total_weight DESC;
+
+-- Q9. Top 10 products by total quantity sold
+SELECT name, SUM(availableQuantity) AS total_sold
+FROM zepto
+GROUP BY name
+ORDER BY total_sold DESC
+LIMIT 10;
+
+-- Q10. Average selling price per category
+SELECT category, ROUND(AVG(discountedSellingPrice), 2) AS avg_selling_price
+FROM zepto
+GROUP BY category
+ORDER BY avg_selling_price DESC;
+
+-- Q11. Top 10 products by stock value
+SELECT name, (discountedSellingPrice * availableQuantity) AS stock_value
+FROM zepto
+ORDER BY stock_value DESC
+LIMIT 10;
+
+-- Q12. Out of stock products count per category
+SELECT category, COUNT(*) AS out_of_stock_count
+FROM zepto
+WHERE outOfStock = TRUE
+GROUP BY category
+ORDER BY out_of_stock_count DESC;
+
+-- Q13. Top 10 heaviest products
+SELECT name, weightInGms
+FROM zepto
+ORDER BY weightInGms DESC
+LIMIT 10;
