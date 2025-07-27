@@ -26,6 +26,7 @@ The dataset includes the following fields:
   - Find products with highest discounts
   - Calculate estimated revenue by category
   - Group products by weight
+  - and many more sql queries explored
 
 ## Files
 
